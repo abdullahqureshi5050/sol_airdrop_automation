@@ -7,9 +7,7 @@ const {
 } = require('@solana/web3.js');
 
 (async ()=>{
-    const wallet = new Keypair();
-    console.log(`pk  ${pk}\n sk ${wallet.secretKey}` );
-    const pubkey = new PublicKey('Enter You Wallet Address Here');
+    const pubkey = new PublicKey('4b4raHcTK5u9FRFn9uggEZpYF6wg34hV4jgzprm8HURE');
     const connection = new Connection(clusterApiUrl('devnet'));
     for (let index = 0; index < 12; index++) {
         const tx = await connection.requestAirdrop( pubkey, 2*LAMPORTS_PER_SOL);
